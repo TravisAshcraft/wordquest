@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WordQuest Admin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>📘 Admin: Add a Book</h1>
+    <form id="book-form" method="POST" action="http://localhost:6969/api/books/admin/submit">
+        <label>Title:<br><input type="text" name="title" required></label><br><br>
+        <label>Author:<br><input type="text" name="author"></label><br><br>
+
+        <button type="button" id="generate-btn">Generate Details</button><br><br>
+
+        <div id="generated-fields" style="display: none;">
+            <label>Point Value:<br><input type="number" name="point_value" required></label><br><br>
+            <label>Word Count:<br><input type="number" name="word_count"></label><br><br>
+            <label>Genre:<br><input type="text" name="genre"></label><br><br>
+            <label>Quiz JSON:<br><textarea name="quiz_json" rows="10" cols="60"></textarea></label><br><br>
+            <button type="submit">Add Book</button>
+        </div>
+    </form>
+    <script type="module" src="./bookupload.js"></script>
+</div>
+</body>
+</html>

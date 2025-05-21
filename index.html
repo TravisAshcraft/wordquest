@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Author" content="Travis Ashcraft" />
+    <title>WordQuest</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      window.WORDQUEST_API_BASE = 'http://localhost:6969/api';
+    </script>
+</head>
+<body>
+<div class="container">
+    <h1>📘 WordQuest</h1>
+    <section id="user-select">
+        <label for="user">Select Your Name:</label>
+        <select id="user">
+            <option value="">-- Choose --</option>
+        </select>
+    </section>
+
+    <section id="stats" style="display: none;">
+        <p><strong>Weekly Points:</strong> <span id="weekly-points">0</span></p>
+        <p><strong>Goal:</strong> <span id="goal">50</span> pts</p>
+    </section>
+
+    <section id="book-quiz-section" style="display: none;">
+        <h2>📚 Available Quizzes</h2>
+        <ul id="book-list">
+            <!-- Filled dynamically -->
+        </ul>
+    </section>
+</div>
+
+<script src="./index.js" type="module"></script>
+</body>
+</html>
